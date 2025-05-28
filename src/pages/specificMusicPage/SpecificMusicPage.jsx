@@ -1,5 +1,5 @@
 import React from 'react'
-import './SpecificMusicPage.css'
+import './specificMusicPage.css'
 
 function SpecificMusicPage({currentEle}){
     return(
