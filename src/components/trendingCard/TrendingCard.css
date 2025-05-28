@@ -1,0 +1,74 @@
+.trendingCardMainContainer{
+    /* border:2px solid blue; */
+    display:flex;
+    margin-top:1rem;
+    height:90%;
+    justify-content: space-around;
+}
+.cardContainer{
+    /* border:2px solid red; */
+    width:16%;
+    height:100%;
+    display:flex;   
+    flex-direction: column;
+    align-items:center;
+    padding:10px;
+    border-radius: 10px;
+    position:relative;
+    transition:.3s;
+
+}
+
+.cardContainer:hover{
+    background-color: rgb(49, 48, 48);
+    cursor: pointer;
+}
+
+.cardContainer img{
+    width:95%;
+    border-radius:10px;
+}
+
+.cardTextContainer{
+    /* border:2px solid pink; */
+    width:100%;
+    margin-top:5%;
+}
+.cardTextContainer h2{
+    font-size:1rem;
+}
+.cardTextContainer p{
+    font-size: 0.9rem;
+    color:rgb(144, 143, 143);
+    font-weight: 500;
+}
+
+#playButtonn {
+    /* border:2px solid red; */
+    background-color: rgb(87,255,87);
+    height:50px;
+    width:50px;
+    border-radius:50px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    position:absolute;
+    bottom:43%;
+    right:10%;
+    display:none;
+
+}
+#playButtonn svg{
+    height:70%;
+    width:100%;
+}
+
+.cardContainer:hover{
+    background-color: rgb(33, 31, 31);
+    cursor: pointer;
+}
+
+.cardContainer:hover #playButtonn{
+    display:flex;
+    transition:.5s;
+    }

@@ -1,0 +1,11 @@
+.MainContainer{
+  /* border:2px solid blue; */
+  height:100vh;
+}
+
+.MainSectionContentContainer{
+  /* border:2px solid red; */
+  display:flex;
+  height: 90%;
+  justify-content: space-evenly ;
+}

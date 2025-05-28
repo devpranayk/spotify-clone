@@ -1,0 +1,135 @@
+*.FooterMainContainer p{
+    width:fit-content;
+}
+.FooterMainContainer{
+    /* border:2px solid red; */
+    height:50%;
+    background-color: #121212;
+}
+.FooterMainContainer p{
+    color:rgb(144, 143, 143);
+    transition:0.2s;
+}
+.FooterMainContainer p:hover{
+    color:#fff;
+    text-decoration: underline;
+}
+
+.footerTopContainer{
+    /* background-color: red; */
+    height:65%;
+    display:flex;
+    flex-direction: row;
+}
+.footerBottomContainer{
+    /* background-color: green; */
+    height:35%;
+}
+
+.footerTop1{
+    height:100%;
+    width:20%;
+    /* background-color: aqua; */
+    /* display:flex; */
+    text-indent: 30px;
+    /* padding-top:30px; */
+}
+.FT11{
+    /* background-color: rgb(8, 35, 74); */
+    width:100%;
+    padding:15px 0px;
+}
+.FT12{
+    /* background-color: rgb(39, 182, 43); */
+    width:100%;
+    padding:5px 0px;
+}
+.FT13{
+    /* background-color: rgb(129, 31, 98); */
+    width:100%;
+    padding:5px 0px;
+}
+.FT14{
+    /* background-color: rgb(150, 186, 59); */
+    width:100%;
+    padding:5px 0px;
+}
+
+
+.footerTop2{
+    height:100%;
+    width:20%;
+    /* background-color:brown; */
+    text-indent: 30px;
+
+    /* display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around; */
+}
+.footerTop3{
+    height:100%;
+    width:20%;
+    /* background-color:blue; */
+    text-indent: 30px;
+
+    /* display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around; */
+}
+.footerTop4{
+    height:100%;
+    width:20%;
+    /* background-color:aquamarine; */
+    text-indent: 30px;
+
+    /* display:flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around; 
+}
+.footerTop5{
+    height:100%;
+    width:20%;
+    /* background-color: pink; */
+    text-indent: 30px;
+
+    /* display:flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.footerIcon{
+    margin:20px 0px;
+    width:fit-content;
+    font-size: 1.5rem;
+    color:white;
+   
+}
+.footerBottomContainer hr{
+    width:90%;
+    justify-self: center;
+    color:rgb(144, 143, 143);
+    border-block-start: 1px solid rgb(144, 143, 143) ;
+    border-color: rgb(99, 98, 98);
+}
+.footerbottomSection{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footerbottomSection h3{
+    margin:50px 50px 0px 0px;
+    color:rgb(99, 98, 98);
+}
+.footerBottomLinks{
+    display:flex;
+    flex-direction:row;
+    text-indent: 50px;
+    margin-top: 50px;
+}

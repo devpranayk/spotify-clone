@@ -1,0 +1,139 @@
+.sidebarMainContainer{
+    /* border:2px solid green; */
+    width:20%;
+    background-color: #121212;
+    border-radius: 10px;
+    border-bottom-right-radius: 20px;
+    height:98%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sideBarTopSection{
+    height:10%;
+    /* border:2px solid red; */
+    border-top-right-radius: 10px;
+    border-top-left-radius:10px;
+    display:flex;
+    justify-content: space-between;
+    padding:1rem;
+    box-shadow: 1px,1px,15px rgba(0,0,0,0.741);
+}
+
+.sideBarTopSection h1{
+    font-size: 1rem;
+    width:75%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sideBarTopSection p{
+    color:grey;
+    font-size: 1.5rem;
+}
+.sideBarTopSection button{
+    width:auto;
+    padding:0px 12px;
+    border-color: transparent;
+    border-radius: 25px;
+    background-color: rgb(45, 44, 44);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+    transition:0.3s;
+
+}
+.sideBarTopSection button:hover{
+    transform:scale(1.03);
+    background-color: rgb(66, 65, 65);
+
+}
+
+.sideBarMiddleSection{
+    height:35%;
+    /* border:2px solid red; */
+    overflow-y:scroll;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.sideBarMiddleSection h1{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.sideBarMiddleSection p{
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.sideBarMiddleSection button{
+    padding:.5rem 1rem;
+    border:transparent;
+    border-radius:15px;
+    background-color: white;
+    color:#121212;
+    outline: none;
+    font-size: .8rem;
+    font-weight: 700;
+}
+.sidebarMiddleCards{
+    /* border:2px solid pink; */
+    padding:1rem;
+    border-radius: 10px ;
+    margin: 1.5rem .5rem;
+    background-color: rgb(34, 33, 33);
+
+}
+.sideBarBottomSection{
+    height:45%;
+    /* border:2px solid red; */
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    background-color: black;
+}
+
+
+.sideBarBottomSection{
+    height:auto;
+    background-color: #121212;
+
+}
+.sideBarBottomSectionTopContainer{
+    padding:1.5rem;
+    display:flex;
+    flex-wrap:wrap;
+    background-color: #121212;
+
+}
+.sideBarBottomSectionTopContainer p{
+    font-size:.79rem;
+    margin:.5rem;
+}
+
+.sideBarBottomSectioBottomContainer{
+    background-color: #121212;
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+
+}
+.sideBarBottomSectioBottomContainer button{
+    color:white;
+    background-color: #121212;
+    padding:.5rem 1rem;
+    border-radius: 50px;
+    border:2px solid white;
+    margin-left:2rem;
+    margin-bottom: 10px;
+    font-weight:700;
+    transition:0.5s;
+}
+.sideBarBottomSectioBottomContainer button:hover{
+    transform:scale(1.05);
+    color:#000;
+    background-color: #fff;
+}

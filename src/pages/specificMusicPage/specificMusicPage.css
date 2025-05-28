@@ -1,0 +1,177 @@
+*{
+    box-sizing: border-box;
+}
+.SMPMainContainer{
+    height:46%;
+    /* border:2px solid red; */
+    display:flex;
+    align-items:end;
+    background-image:linear-gradient(#9e552b,#7d4012,#632008,#501b01)
+}
+.SMPMainContainer img{
+    height:250px;
+    width:250px;
+    margin :20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 60px rgba(0, 0, 0, .5);
+    transition: 0.3s;
+    position:relative;
+}
+.SMPImg :hover{
+    box-shadow: 4px, 8px, 10px, rgb(112, 103, 103);
+    height:255px;
+    width:255px;
+}
+.SMPHead{
+    /* border:2px solid red; */
+    margin :20px;
+    font-size: 2.2rem;
+    font-weight: 900;
+    box-shadow: 4px, 8px, 10px, rgb(56, 56, 56);
+    color:#FFFFFF;   
+}
+.SMPSubhead{
+    /* border:2px solid green; */
+    margin :20px;
+    font-weight: 800;
+    color:#a3a2a2;
+    font-size: 15px;
+}
+.SMPMusicContainer{
+    height:54%;
+    /* border:2px solid pink; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image:linear-gradient(#401601,#1a0901,#060200) ;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;}
+
+.SMPSymbols{
+    height:100px;
+    /* border:2px solid red; */
+    width:100%;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    color: #8c8a8a;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.SMPSymbols1{
+    margin-left: 10px;
+}
+.SMPSymbols2{
+    margin-right: 70px;
+}
+.SMPSymbols i{
+    margin: 15px;
+    display:inline-block;
+    transition:0.3s;
+}
+.SMPSymbols i:hover{
+    cursor: pointer;
+    color: #ffffff;
+    transform: scale(1.09);
+}
+.SMPAudio{
+    width:100%;
+    background-color: none;
+    color:#9e552b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SMPAudioCntrols{
+    width:900px;
+    justify-self: center;
+  }
+
+.heart {
+    position: relative;
+    display: inline-block;
+    /* margin: 0 10px; */
+    margin-left: 5px;
+
+  }
+  .lyrics {
+    position: relative;
+    display: inline-block;
+    /* margin: 0 10px; */
+  }
+  .Playlist {
+    position: relative;
+    display: inline-block;
+    /* margin: 0 10px; */
+  }
+  .Queue {
+    position: relative;
+    display: inline-block;
+    /* margin: 0 10px; */
+  }
+  .Shuffle {
+    position: relative;
+    display: inline-block;
+    /* margin: 0 10px; */
+  }
+  .Repeat {
+    position: relative;
+    display: inline-block;
+    /* margin: 0 10px; */
+  }
+  .Device {
+    position: relative;
+    display: inline-block;
+    /* margin: 0 10px; */
+  }
+.tooltip {
+    visibility: hidden;
+    background-color: rgb(40,40,40);
+    color: #fff;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    position: absolute;
+    bottom: 125%; /* above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition:  0.3s;
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+  }
+  .heart:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  .lyrics:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  .Playlist:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  } 
+  .Queue:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }  
+  .Shuffle:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  .Repeat:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  .Device:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
