@@ -1,6 +1,6 @@
 import React from'react'
 import './CTrending.css'
-import CTrendingCard from'../cTrendingCard/CTrendingCard'
+import CTrendingCard from'../ctrendingCard/CTrendingCard'
 function CTrending({setCurrentPage, setCurrentEle}){
     return(
         <div className="CtrendingSectionMainContainer">
