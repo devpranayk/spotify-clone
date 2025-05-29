@@ -76,8 +76,8 @@ import Navbar from './components/navbar/Navbar'
 import Sidebar from './components/sidebar/Sidebar'
 import MainSection from './components/mainSection/MainSection'
 import Footer from './components/footer/Footer'
-import Login from './pages/Login'
-import Signup from './pages/Signup'
+import Login from './pages/login/Login'
+import Signup from './pages/signup/Signup'
 
 function Layout() {
   return (
