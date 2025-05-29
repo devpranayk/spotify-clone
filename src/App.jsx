@@ -23,48 +23,93 @@
 // }
 
 // export default App
+//                                                                                  2nd
 
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+// import Navbar from './components/navbar/Navbar'
+// import Sidebar from './components/sidebar/Sidebar'
+// import MainSection from './components/mainSection/MainSection'
+// import Footer from'./components/footer/Footer'
+// import Login from './pages/login/Login'       // import login page
+// import Signup from './pages/signup/Signup'    // import signup page
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+// function App() {
+//   return (
+//     <Router>
+//       <Routes>
+//         {/* Route for login page */}
+//         <Route 
+//           path="/login" 
+//           element={<Login />} 
+//         />
+
+//         {/* Route for signup page */}
+//         <Route 
+//           path="/signup" 
+//           element={<Signup />} 
+//         />
+
+//         {/* Default route for your main app layout */}
+//         <Route 
+//           path="/*" 
+//           element={
+//             <div className="MainContainer">
+//               <Navbar />
+//               <div className="MainSectionContentContainer">
+//                 <Sidebar />
+//                 <MainSection />
+//               </div>
+//               <Footer />
+//             </div>
+//           } 
+//         />
+//       </Routes>
+//     </Router>
+//   )
+// }
+
+// export default App
+//                                                               3rd
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import './App.css'
 import Navbar from './components/navbar/Navbar'
 import Sidebar from './components/sidebar/Sidebar'
 import MainSection from './components/mainSection/MainSection'
-import Footer from'./components/footer/Footer'
-import Login from './pages/login/Login'       // import login page
-import Signup from './pages/signup/Signup'    // import signup page
+import Footer from './components/footer/Footer'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
+
+function Layout() {
+  return (
+    <div className="MainContainer">
+      <Navbar />
+      <div className="MainSectionContentContainer">
+        <Sidebar />
+        <MainSection />
+      </div>
+      <Footer />
+    </div>
+  )
+}
 
 function App() {
   return (
     <Router>
-      <Routes>
-        {/* Route for login page */}
-        <Route 
-          path="/login" 
-          element={<Login />} 
-        />
-
-        {/* Route for signup page */}
-        <Route 
-          path="/signup" 
-          element={<Signup />} 
-        />
-
-        {/* Default route for your main app layout */}
-        <Route 
-          path="/*" 
-          element={
-            <div className="MainContainer">
-              <Navbar />
-              <div className="MainSectionContentContainer">
-                <Sidebar />
-                <MainSection />
-              </div>
-              <Footer />
-            </div>
-          } 
-        />
-      </Routes>
+      <AppContent />
     </Router>
+  )
+}
+
+function AppContent() {
+  const location = useLocation()
+  const isAuthPage = location.pathname === '/login' || location.pathname === '/signup'
+
+  return (
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/*" element={<Layout />} />
+    </Routes>
   )
 }
 
