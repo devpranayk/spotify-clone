@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Signup() {
   const [username, setUsername] = useState('');
+  const [email, setEmail] = useState(''); // added
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -11,12 +14,13 @@ function Signup() {
       const res = await fetch('http://localhost:5000/api/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, email, password }),
       });
       const data = await res.json();
 
       if (res.ok) {
-        setMessage('Signup successful! You can now login.');
+        localStorage.setItem('token', data.token); // save token
+        navigate('/'); // redirect to homepage
       } else {
         setMessage(data.message || 'Signup failed');
       }
@@ -34,6 +38,14 @@ function Signup() {
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          required
+          style={{ display: 'block', marginBottom: 10 }}
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
           style={{ display: 'block', marginBottom: 10 }}
         />
