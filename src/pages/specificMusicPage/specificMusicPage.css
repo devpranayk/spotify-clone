@@ -174,4 +174,12 @@
   .Device:hover .tooltip {
     visibility: visible;
     opacity: 1;
+    font-size:1.2rem;
+  }
+
+  .icon{
+    font-size:1.5rem;
+    background-color: transparent;
+    border:none;
+    color:#A3A2A2;
   }
