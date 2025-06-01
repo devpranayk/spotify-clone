@@ -78,6 +78,7 @@ import MainSection from './components/mainSection/MainSection'
 import Footer from './components/footer/Footer'
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
+import { AuthProvider } from './context/AuthContext' // ✅ Step 2: import AuthProvider
 
 function Layout() {
   return (
@@ -92,10 +93,13 @@ function Layout() {
   )
 }
 
+// ✅ Wrap AppContent with AuthProvider inside Router
 function App() {
   return (
     <Router>
-      <AppContent />
+      <AuthProvider>
+        <AppContent />
+      </AuthProvider>
     </Router>
   )
 }
