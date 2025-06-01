@@ -55,13 +55,17 @@
 // }
 
 // export default Login;
-//                                                                      2nd , for redirect to home after login
+//                                2nd , for redirect to home after login,toast for success or failure 
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { useAuth } from '../../context/AuthContext'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function Login() {
   const navigate = useNavigate()
+  const { login } = useAuth() // ✅ use login from AuthContext
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState(null)
@@ -69,11 +73,23 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
-      localStorage.setItem('token', res.data.token)
-      navigate('/') // 🔁 Redirect to home after login
+      const res = await axios.post('http://localhost:5000/api/auth/login', {
+        email,
+        password,
+      })
+
+      const token = res.data.token
+      const user = res.data.user
+
+      // ✅ Save token and update AuthContext
+      localStorage.setItem('token', token)
+      login(user) // use login() to update context and localStorage properly
+
+      toast.success('Login successful')
+      navigate('/') // redirect to home
     } catch (err) {
       setError('Invalid email or password')
+      toast.error('Login failed')
     }
   }
 
@@ -81,8 +97,18 @@ function Login() {
     <div className="auth-container">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} required />
-        <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
+        <input
+          type="email"
+          placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
         <button type="submit">Login</button>
       </form>
       {error && <p style={{ color: 'red' }}>{error}</p>}
