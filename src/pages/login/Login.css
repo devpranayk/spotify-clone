@@ -1,0 +1,124 @@
+.LoginPage {
+  position: relative;
+  min-height: 100vh;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient( #292929, #181818,#080808);
+  overflow: hidden;
+}
+.auth-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 2rem;
+  background-color: #121212;
+  color: white;
+  border:white;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(71, 71, 71, 0.6);
+  background: linear-gradient( #080808,#292929);
+
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid grey;
+  border-radius: 6px;
+  font-size: 16px;
+  background: #161616;
+  color: white;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #13d042;
+  color: #000;
+  border: none;
+  border-radius: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.auth-container button:hover {
+  background-color: #22c95d;
+}
+
+.dha{
+  padding-top:10px;
+  font-size: 14px;
+  color:#858484;
+}
+.dha a{
+  color:#fff;
+}
+
+/*adding decorative items */
+
+@keyframes floatLeft {
+  0%, 100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(-45deg);
+  }
+}
+
+@keyframes floatHeadset {
+  0%, 100% {
+    transform: translateY(0) rotate(25deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(25deg);
+  }
+}
+
+@keyframes floatMusic {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(0deg);
+  }
+}
+
+.decor-logo-left {
+  position: absolute;
+  left: 100px;
+  /* top: 10%; */
+  transform: rotate(-45deg);
+  width: 500px;
+filter: brightness(0) saturate(100%) invert(67%) sepia(98%) saturate(443%) hue-rotate(73deg) brightness(97%) contrast(93%);
+  animation: floatLeft 4s ease-in-out infinite;
+}
+
+.decor-headset {
+  position: absolute;
+  top: 20px;
+  right: 200px;
+  transform: rotate(25deg);
+  width: 250px;
+filter: brightness(0) saturate(100%) invert(67%) sepia(98%) saturate(443%) hue-rotate(73deg) brightness(97%) contrast(93%);
+  animation: floatHeadset 4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.decor-music {
+  position: absolute;
+  bottom: 14px;
+  right: 500px;
+  transform: rotate(0deg);
+  width: 250px;
+filter: brightness(0) saturate(100%) invert(67%) sepia(98%) saturate(443%) hue-rotate(73deg) brightness(97%) contrast(93%);
+  animation: floatMusic 4s ease-in-out infinite;
+  animation-delay: 2s;
+}
