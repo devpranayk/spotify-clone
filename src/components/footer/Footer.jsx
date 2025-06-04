@@ -55,7 +55,7 @@ function Footer (){
                                     <p> About Ads </p>
                                     <p> Accessibility</p>
                             </div>
-                            <h3>@SpotifyCloneWithReact</h3>
+                            <h3>@SpotifyClone.DevPranay.MERN</h3>
                        </div>
                 </div>
             </div>
