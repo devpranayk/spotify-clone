@@ -78,7 +78,8 @@ import MainSection from './components/mainSection/MainSection'
 import Footer from './components/footer/Footer'
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
-import { AuthProvider } from './context/AuthContext' // ✅ Step 2: import AuthProvider
+import { AuthProvider } from './context/AuthContext' 
+                                        //  Step 2: import AuthProvider
 
 function Layout() {
   return (
@@ -93,7 +94,7 @@ function Layout() {
   )
 }
 
-// ✅ Wrap AppContent with AuthProvider inside Router
+                                //  Wrap AppContent with AuthProvider inside Router
 function App() {
   return (
     <Router>
@@ -104,16 +105,26 @@ function App() {
   )
 }
 
+
+
+
 function AppContent() {
+
   const location = useLocation()
+
   const isAuthPage = location.pathname === '/login' || location.pathname === '/signup'
 
   return (
+
     <Routes>
+
+
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/*" element={<Layout />} />
+
     </Routes>
+    
   )
 }
 
