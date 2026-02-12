@@ -4,6 +4,7 @@ import TrendingCard from '../trendingCard/TrendingCard'
 
 function Trending({setCurrentPage, setCurrentEle}){
     return(
+        
         <div className="trendingSectionMainContainer">
             <span>
             Trending Songs

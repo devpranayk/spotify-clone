@@ -11,14 +11,21 @@ import CSpecificMusicPage from '../../pages/CSpecificMusicPage/CSpecificMusicPag
 
 
 
+
+
 function MainSection(){
+
     const [currentPage, setCurrentPage] = useState("home")
     const [currentEle,setCurrentEle]=useState(null)
+
     return(
+
         <main class="mainSection">
             {console.log(currentPage)}
+
             {
                 currentPage === "home" ? <>
+
                 <Trending setCurrentEle={setCurrentEle} setCurrentPage={setCurrentPage} />
                 <PopularArtist setCurrentEle={setCurrentEle} setCurrentPage={setCurrentPage} />
                 <BTrending setCurrentEle={setCurrentEle} setCurrentPage={setCurrentPage} />
@@ -27,9 +34,13 @@ function MainSection(){
                 :currentPage==="artistSpecificPage" ? <> <SpecificArtistPage currentEle={currentEle}/> </>
                 :currentPage==="BmusicSpecificPage" ? <> <BSpecificMusicPage currentEle={currentEle}/> </>
                 :currentPage==="CmusicSpecificPage" ? <> <CSpecificMusicPage currentEle={currentEle}/> </> :null
+
             }
             
         </main>
+        
     )
+
 }
+
 export default MainSection

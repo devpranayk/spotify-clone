@@ -43,16 +43,20 @@ import { useAuth } from '../../context/AuthContext'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
+
 function Navbar() {
   const navigate = useNavigate()
   const { user, logout } = useAuth()
   const [currentUser, setCurrentUser] = useState(user)
 
-  // ✅ Sync currentUser state whenever context user changes
+
+                                                 //  Sync currentUser state whenever context user changes
   useEffect(() => {
     setCurrentUser(user)
     console.log("Navbar re-render triggered: user updated", user)
   }, [user])
+
+
 
   const handleLogout = () => {
     logout()
@@ -60,9 +64,14 @@ function Navbar() {
     navigate('/')
   }
 
+
+
   return (
     <>
+
+
       <nav>
+
         <div className="navLeftPart">
           <div className="SpotifyLogo">
             <i className="fab fa-spotify"></i>
@@ -84,12 +93,14 @@ function Navbar() {
           </div>
         </div>
 
+
         <div className="navRightPart">
           <div className="installDiv">
             <p>
               <i className="fas fa-download"></i> Install App
             </p>
           </div>
+
 
           {currentUser ? (
             <>
@@ -116,11 +127,14 @@ function Navbar() {
                 </Link>
               </div>
             </>
+
           )}
+
         </div>
       </nav>
 
-      {/* Toast container to show notifications */}
+
+                                            {/* Toast container to show notifications */}
       <ToastContainer position="top-right" autoClose={2000} hideProgressBar={false} />
     </>
   )

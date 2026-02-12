@@ -5,9 +5,12 @@ function TrendingCard({setCurrentPage, setCurrentEle}){
     
     return(
         <>
+
         <div className="trendingCardMainContainer">
+            
         {
             trendingCardData.map((ele,id)=>{
+                
                 
                 return(
                     <>
