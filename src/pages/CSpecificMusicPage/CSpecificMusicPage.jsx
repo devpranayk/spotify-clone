@@ -7,14 +7,18 @@ function CSpecificMusicPage({currentEle}){
     return(
         <>
             <div className="CSMPMainContainer">
+
                 <div className="CSMPImg">
                     <img src={currentEle.imgSrc} alt={currentEle.heading}/>
                 </div>
+
                 <div ClassName="CSMPMatter">
                     <h1 className="CSMPHead">{currentEle.heading}</h1>
                     <p  className="CSMPSubhead">{currentEle.subHeading}</p>
                 </div>
+
             </div>
+
             <div className="CSMPMusicContainer">
                 <div className="CSMPSymbols">
                     <div className="SMPSymbols1" >
@@ -26,6 +30,7 @@ function CSpecificMusicPage({currentEle}){
                         <IconButton iconClass="fas fa-bookmark" label="Playlist" tooltip="Add to Playlist" />
 
                     </div>
+
                     <div className="SMPSymbols2">
                         {/* <div className="Queue">  <i class="fas fa-list-ul"></i> <span class="tooltip">Queue</span> </div> */}
                         <IconButton iconClass="fas fa-list-ul" label="Queue" tooltip="Queue" />
@@ -36,12 +41,16 @@ function CSpecificMusicPage({currentEle}){
                         {/* <div className="Device">  <i class="fas fa-tv"></i> <span class="tooltip">Connect to a device</span> </div> */}
                         <IconButton iconClass="fas fa-tv" label="Device" tooltip="Connect to a device" />
                     </div>
+
                 </div>
                 <div className="CSMPAudio" >
                     <audio className="CSMPAudioCntrols" type="audio/mp3" src={currentEle.audio} controls></audio>
                 </div>
             </div>
+
         </>
+
+        
     )
 }
 export default CSpecificMusicPage
