@@ -110,6 +110,7 @@ function Layout() {
 
                                 //  Wrap AppContent with AuthProvider inside Router
 function App() {
+  
   return (
 
     <Router>
@@ -117,7 +118,7 @@ function App() {
         <AppContent />
       </AuthProvider>
     </Router>
-    
+
   )
 }
 
