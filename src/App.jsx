@@ -69,7 +69,12 @@
 // }
 
 // export default App
+
+
+
 //                                                               3rd
+
+
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/navbar/Navbar'
@@ -79,10 +84,16 @@ import Footer from './components/footer/Footer'
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
 import { AuthProvider } from './context/AuthContext' 
+
+
+
                                         //  Step 2: import AuthProvider
+
+
 
 function Layout() {
   return (
+
     <div className="MainContainer">
       <Navbar />
       <div className="MainSectionContentContainer">
@@ -91,17 +102,22 @@ function Layout() {
       </div>
       <Footer />
     </div>
+
+
   )
 }
+
 
                                 //  Wrap AppContent with AuthProvider inside Router
 function App() {
   return (
+
     <Router>
       <AuthProvider>
         <AppContent />
       </AuthProvider>
     </Router>
+    
   )
 }
 
