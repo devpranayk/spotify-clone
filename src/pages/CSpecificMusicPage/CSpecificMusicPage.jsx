@@ -46,11 +46,13 @@ function CSpecificMusicPage({currentEle}){
                 <div className="CSMPAudio" >
                     <audio className="CSMPAudioCntrols" type="audio/mp3" src={currentEle.audio} controls></audio>
                 </div>
+                
             </div>
+
 
         </>
 
-        
+
     )
 }
 export default CSpecificMusicPage
